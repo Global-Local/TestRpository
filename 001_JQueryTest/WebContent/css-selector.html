@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+<script src="jquery-2.1.1.js"></script>
+<script >
+function cssSelector(){
+	         $("li").eq(2).css({"background-color": "yellow"});
+}
+
+function multipleCssProperty(){
+    		$("li").filter(".middle").css({"color":"red", "background-color":"green"});
+}
+     
+function settingElementWidthAndHeight(){
+			 $("div:first").css("background-color", "blue");
+}
+</script>
+</head>
+<body>
+<h1>jQuery - CSS Selectors Methods</h1>
+The jQuery library supports nearly all of the selectors included in Cascading Style Sheet (CSS) specifications 1 through 3, as outlined on the World Wide Web Consortium's site.
+
+Using JQuery library developers can enhance their websites without worrying about browsers and their versions as long as the browsers have JavaScript enabled.
+
+Most of the JQuery CSS Methods do not modify the content of the jQuery object and they are used to apply CSS properties on DOM elements.
+</br>
+example
+
+      <div>
+		
+         <ul>
+            <li class="top">list item 1</li>
+            <li class="top">list item 2</li>
+            <li class="middle">list item 3</li>
+            <li class="middle">list item 4</li>
+            <li class="bottom">list item 5</li>
+            <li class="bottom">list item 6</li>
+         </ul>
+			
+      </div>
+  <input type="button" onclick="cssSelector();" value="cssSelector"></input>
+      <input type="button" onclick="multipleCssProperty();" value="multipleCssProperty"></input>
+      <input type="button" onclick="settingElementWidthAndHeight();" value="settingElementWidthAndHeight"></input>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Insert title here</title>
+<script src="jquery-2.1.1.js"></script>
+<script >
+function findElementByIndex(){
+	         $("li").eq(2).css({"background-color": "yellow"});
+}
+
+function filterOutElements(){
+    		$("li").filter(".middle").css({"background-color": "cyan"});
+}
+     
+function locatingDescendentElements(){
+	 		$("p").find("span").css({"background-color": "green"});
+}
+</script>
+</head>
+<body>
+<p>
+	<span> this is span 1</span>
+	this is a paragraph 
+	<span>this is span 2</span>
+</p>
+	<span>this is span 3</span>
+	
+	</br>
+jQuery is a very powerful tool which provides a variety of DOM traversal methods to help us select elements in a document randomly as well as in sequential method.
+
+Most of the DOM Traversal Methods do not modify the jQuery object and they are used to filter out elements from a document based on given conditions.
+	<div>
+         <ul>
+            <li class="top">list item 1</li>
+            <li class="top">list item 2</li>
+            <li class="middle">list item 3</li>
+            <li class="middle">list item 4</li>
+            <li class="bottom">list item 5</li>
+            <li class="bottom">list item 6</li>
+         </ul>
+      </div>
+      <input type="button" onclick="locatingDescendentElements();" value="locate Descendent Elements"></input>
+      <input type="button" onclick="filterOutElements();" value="filter Out Elements"></input>
+      <input type="button" onclick="findElementByIndex();" value="find Element By Index"></input>
+      
+      
+</body>
+</html>
